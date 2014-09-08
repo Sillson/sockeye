@@ -12,5 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+/* removed turbolinks */
+//= require angular/angular
+//= require angular-resource/angular-resource
+//= require bootstrap-sass-official
+//= require angular-cookies
+//= require angular-sanitize
+//= require angular-animate
+//= require angular-touch
+//= require angular-route
 //= require_tree .
