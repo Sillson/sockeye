@@ -22,4 +22,5 @@
 //= require angular-route
 //= require json3
 //= require bootstrap-sass-official
+//= require underscore
 //= require_tree .

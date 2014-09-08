@@ -1,0 +1,13 @@
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "angular": "1.2.23",
+    "angular-route": "latest",
+    "angular-resource": "latest",
+    "angular-mocks": "latest",
+    "json3": "latest",
+    "es5-shim": "latest",
+    "underscore": "latest",
+    "bootstrap-sass-official": "latest"
+  }
+}
