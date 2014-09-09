@@ -8,5 +8,7 @@
   %div{"ng-controller" => "SalmonCtrl"}
     %ul
       %li{"ng-repeat" => "salmon in salmon"}
-        %h3 {{salmon.species}}
+        %h3 {{salmon.common_name}}
+        %p {{salmon.species}}
+
 
