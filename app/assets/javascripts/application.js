@@ -23,6 +23,6 @@
 //= require json3
 //= require bootstrap-sass-official
 //= require underscore
+//= require app
 //= require_tree ./angular
-//= require_app
 //= require_tree .
