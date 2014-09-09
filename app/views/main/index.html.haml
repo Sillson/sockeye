@@ -6,6 +6,7 @@
     %h1 Hello {{yourName}}!
 
   %div{"ng-controller" => "SalmonCtrl"}
-    %h1 Did you know that {{message}}?
-
+    %ul
+      %li{"ng-repeat" => "salmon in salmon"}
+        %h3 {{salmon.species}}
 

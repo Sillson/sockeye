@@ -1,3 +1,4 @@
-App.controller 'SalmonCtrl', ['$scope', ($scope) ->
-  $scope.message = "Salmon Rock!"
+App.controller 'SalmonCtrl', ['$scope', 'Salmon', ($scope, Salmon) ->
+  $scope.salmon = Salmon.query()
 ]
+
