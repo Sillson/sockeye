@@ -5,9 +5,14 @@
     "angular-route": "latest",
     "angular-resource": "latest",
     "angular-mocks": "latest",
+    "angular-cookies": "latest",
+    "angular-sanitize": "latest",
+    "angular-animate": "latest",
+    "angular-touch": "latest",
     "json3": "latest",
     "es5-shim": "latest",
     "underscore": "latest",
-    "bootstrap-sass-official": "latest"
+    "bootstrap-sass-official": "latest",
+    "d3": "latest"
   }
 }
