@@ -1,2 +1,5 @@
-%h1 Main#index
-%p Find me in app/views/main/index.html.haml
+%div
+  %label Name:
+  %input{"ng-model" => "yourName", :placeholder => "Enter a name here", :type => "text"}/
+  %hr/
+  %h1 Hello {{yourName}}!
