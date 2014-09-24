@@ -1,28 +1,40 @@
-== README
+== sockeye
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Something to keep me up at night, and help me coalesce interests. 
 
-Things you may want to cover:
+Objective: 
 
-* Ruby version
+Create a dashboard for counts of anadramous fish species spawning through the following Dams: 
 
-* System dependencies
+- Bonneville
+- The Dalles
+- Ice Harbor
+- John Day
+- Little Goose
+- Lower Granite
+- Lower Monumental
+- McNary
+- Priest Rapids
+- Rock Island
+- Rocky Reach
+- Wells
+- Wilamette Falls
 
-* Configuration
+Select salmon runs are recovering at historical rates, while others continue to suffer and decline. I hope to enable greater visualization into this data, and provide an intuitive manner in which to understand it. 
 
-* Database creation
+I have drawn inspiration from d3 examples utilizing SVG maps and canvas overlays to display data. Utimately I hope to utilize these techniques, as well as charts and others. 
 
-* Database initialization
+If you like fish and data, feel free to ping me on any collaboration!
 
-* How to run the test suite
+Components: 
 
-* Services (job queues, cache servers, search engines, etc.)
+- Ruby 2.1.2
+- Rails 4.1
+- Angular
+- d3
+- bower front end management
 
-* Deployment instructions
-
-* ...
 
 
-Please feel free to use a different markup language if you do not plan to run
+
 <tt>rake doc:app</tt>.
