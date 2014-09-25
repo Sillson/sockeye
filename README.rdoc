@@ -33,8 +33,3 @@ Components:
 - Angular
 - d3
 - bower front end management
-
-
-
-
-<tt>rake doc:app</tt>.

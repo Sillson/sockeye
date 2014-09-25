@@ -1,11 +1,11 @@
 .container
   .row
     %label Name:
-    %input{"ng-model" => "sbox", :placeholder => "Enter a name here", :type => "text"}
+    %input{"ng-model" => "filterbox", :placeholder => "Enter a name here", :type => "text"}
 
   %div{"ng-controller" => "SalmonCtrl"}
     %ul
-      %li{"ng-repeat" => "salmon in salmon | filter:sbox"}
+      %li{"ng-repeat" => "salmon in salmon | filter:filterbox"}
         %h3 {{salmon.common_name}}
         %p {{salmon.species}}
 
