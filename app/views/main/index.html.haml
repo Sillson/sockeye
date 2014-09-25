@@ -1,12 +1,22 @@
 .container
   .row
-    %label Name:
-    %input{"ng-model" => "filterbox", :placeholder => "Enter a name here", :type => "text"}
+    .col-md-6
+      %label Species:
+      %input{"ng-model" => "salmonfilter", :placeholder => "Enter a name here", :type => "text"}
 
-  %div{"ng-controller" => "SalmonCtrl"}
-    %ul
-      %li{"ng-repeat" => "salmon in salmon | filter:filterbox"}
-        %h3 {{salmon.common_name}}
-        %p {{salmon.species}}
+      %div{"ng-controller" => "SalmonCtrl"}
+        %ul
+          %li{"ng-repeat" => "salmon in salmon | filter:salmonfilter"}
+            %h3 {{salmon.common_name}}
+            %p {{salmon.species}}
+    .col-md-6
+      %label Run:
+      %input{"ng-model" => "runfilter", :placeholder => "Enter a date", :type => "text"}
+
+      %div{"ng-controller" => "RunCtrl"}
+        %ul
+          %li{"ng-repeat" => "run in run | filter:runfilter"}
+            %h3 {{run.date}}
+            %p {{run.count}}
 
 
