@@ -24,5 +24,6 @@
 //= require bootstrap-sass-official
 //= require underscore
 //= require app
+//= require moment
 //= require_tree ./angular
 //= require_tree .
