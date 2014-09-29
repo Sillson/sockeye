@@ -15,8 +15,8 @@
 
       %div{"ng-controller" => "RunCtrl"}
         %ul
-          %li{"ng-repeat" => "run in run | filter:runfilter"}
+          %li{"ng-if" => "runfilter", "ng-repeat" => "run in run | filter:runfilter |limitTo: 20"}
             %h3 {{run.format_date}}
-            %p Count for {{run.salmon.common_name}} {{run.count}}
+            %p The count for {{run.salmon.common_name}} at {{run.dam.name}} was {{run.count}} on {{run.format_date}}
 
 
