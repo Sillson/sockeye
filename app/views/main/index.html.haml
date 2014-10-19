@@ -1,5 +1,12 @@
 .container
-  .row
+  .row.jumbotron.banner_row
+    %h2 Welcome to Sockeye
+    %p A project designed to lend insight into the anadramous fish runs of the Pacific Northwest through data and visualization.To get started, you can search by either species or date to track where the salmon are heading.
+
+
+  .row.pink_salmon
+  
+  .row#dash
     .col-md-6
       %label Species:
       %input{"ng-model" => "salmonfilter", :placeholder => "Enter a name here", :type => "text"}
@@ -18,5 +25,8 @@
           %li{"ng-if" => "runfilter", "ng-repeat" => "run in run | filter:runfilter |limitTo: 20"}
             %h3 {{run.format_date}}
             %p The count for {{run.salmon.common_name}} at {{run.dam.name}} was {{run.count}} on {{run.format_date}}
+      %div{ :id => "salmon-run"}
+        
+        
 
 

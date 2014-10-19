@@ -1,1 +1,31 @@
+@import "bourbon";
+$nav-background-color:#FFF3E0;
+$nav-background-water:#5396AE;
 
+body {
+  background-color: lighten($nav-background-color, 4%);
+}
+
+.salmon_nav{
+  @include linear-gradient(to bottom, $nav-background-water, $nav-background-color);
+
+}
+
+.banner_row{
+  background-color: lighten($nav-background-water, 45%);
+  border: 1px lightgrey dashed;
+
+}
+
+.banner_row:after{
+  height: 230px;
+  width: 100%;
+  background-image: url('oncorhynchus-gorbusha.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.30;
+  content:"";
+  top:97px;
+  left:33px;
+}
