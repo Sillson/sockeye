@@ -1,0 +1,31 @@
+<style>
+  path { stroke:white; stroke-width: 2; fill: black;}
+  body, svg {background-color: grey;}
+</style>
+ <body>
+  <script>
+    // d3 selects body and appends an svg tag
+    var svg = d3.select('body').append('svg');
+
+    //generate random squiggle data for center of page
+    var data = d3.range(50,1000,10).map(function(y_offset){
+      return d3.range(100, 700, 10).map(function(d){
+        var y=d;
+        if(y < 100 || y > 1500) y = 50; else y = 50;
+        return [d, y_offset - Math.random() * Math.random() * y/10];
+      });
+    });
+
+    //line generator
+    var line = d3.svg.line()
+      .x(function(d) {return d[0];})
+      .y(function(d) {return d[1];})
+      .interpolate("basis");
+
+    // several path elements using line generator and random squiggle line data
+    svg.selectAll('path').data(data).enter()
+      .append('path').attr('d', line);
+
+  </script>
+  </body>
+</html>

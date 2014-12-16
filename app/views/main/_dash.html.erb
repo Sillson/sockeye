@@ -1,0 +1,61 @@
+<script>
+var width = 800,
+    height = 500;
+
+var svg = d3.select("#map").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var projection = d3.geo.mercator()
+    .center([width/2, 5 ])
+    .scale(50)
+    .rotate([-180,0]);
+
+
+var path = d3.geo.path()
+    .projection(projection);
+
+var g = svg.append("g");
+
+d3.json("CA_ID_OR_WA.geojson", function(json) {
+
+  // d3.json("NP.geojson", function(json) {
+
+  //   g.selectAll("path")
+  //     .data(json.features)
+  //     .enter()
+  //     .append("path")
+  //     .attr("d", path)
+  //     .attr("fill-opacity", 0.5)
+  //     .attr("fill", "green")
+  //     .attr("stroke", "#222")
+  //     .style("stroke-width", .1);
+  // });
+
+  g.selectAll("path")
+    .data(json.features)
+    .enter()
+    .append("path")
+    .attr("d", path)
+    .attr("fill-opacity", 0.5)
+    .attr("fill", "#85C3C0")
+    .attr("stroke", "#222")
+    .style("stroke-width", 0.1);
+
+});
+
+
+
+var zoom = d3.behavior.zoom()
+    .on("zoom",function() {
+        g.attr("transform","translate("+ 
+            d3.event.translate.join(",")+")scale("+d3.event.scale+")");
+        g.selectAll("circle")
+            .attr("d", path.projection(projection));
+        g.selectAll("path")  
+            .attr("d", path.projection(projection)); 
+ 
+  });
+ 
+svg.call(zoom)
+</script>

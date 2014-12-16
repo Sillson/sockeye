@@ -14,6 +14,7 @@
     "underscore": "latest",
     "bootstrap-sass-official": "latest",
     "d3": "latest",
-    "moment": "latest"
+    "moment": "latest",
+    "bubble-chart": "latest"
   }
 }

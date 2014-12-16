@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row jumbotron banner_row">
+    <h2>Welcome to Sockeye</h2>
+    <p>A project designed to lend insight into the anadramous fish runs of the Pacific Northwest through data and visualization.To get started, you can search by either species or date to track where the salmon are heading.</p>
+  </div>
+  <div class="row pink_salmon"></div>
+  <div class="row" id="dash">
+    <div class="col-md-6 col-sm-6 col-xs-6">
+      <label>Species:</label>
+      <input ng-model="salmonfilter" placeholder="Enter a name here" type="text"></input>
+      <div ng-controller="SalmonCtrl">
+        <ul>
+          <li ng-if="salmonfilter" ng-repeat="salmon in salmon | filter:salmonfilter">
+            <h3>{{salmon.common_name}}</h3>
+            <p>{{salmon.species}}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-6">
+      <label>Run:</label>
+      <input ng-model="runfilter" placeholder="Enter a date" type="text"></input>
+      <div ng-controller="RunCtrl">
+        <ul>
+          <li ng-if="runfilter" ng-repeat="run in run | filter:runfilter | limitTo:5">
+            <sockeye></sockeye>
+          </li>
+        </ul>
+      </div>
+      <div id="salmon-run"></div>
+    </div>
+  </div>
+</div>
+<div class="container" id="map">
+  <div class="col-md-4">
+    <%= render "dash" %>
+  </div>
+
+        
+        
+
+

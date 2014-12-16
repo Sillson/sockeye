@@ -20,10 +20,12 @@
 //= require angular-animate
 //= require angular-touch
 //= require angular-route
+//= require d3
 //= require json3
 //= require bootstrap-sass-official
 //= require underscore
 //= require app
 //= require moment
+//= require bubble-chart
 //= require_tree ./angular
 //= require_tree .
